@@ -26,7 +26,16 @@ function App() {
           <a href="https://loopio.com/" target="_blank">
             Loopio
           </a>
-          , I've gained a great deal of best practices and experience.
+          , I've gained a great deal of best practices and experience. I will
+          continue to explore new web technologies either on this website or
+          side projects you find here. Follow my progress at this{" "}
+          <a
+            href="https://github.com/rainzhao2000/rainzhao.com"
+            target="_blank"
+          >
+            Github repo
+          </a>
+          .
         </p>
       </Section>
     </div>
