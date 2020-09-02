@@ -10,7 +10,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
 }
 
 .Header-inline {
@@ -24,4 +23,9 @@
 .Header-socials {
   display: flex;
   flex-direction: column;
+}
+
+.Header-jump {
+  text-decoration: none;
+  font-size: 10vh;
 }

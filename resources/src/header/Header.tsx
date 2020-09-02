@@ -7,18 +7,29 @@ import gmailLogo from "./gmailLogo.png";
 import githubLogo from "./githubLogo.png";
 // @ts-ignore
 import linkedInLogo from "./linkedInLogo.png";
+// @ts-ignore
+import resume from "./Resume.pdf";
 import "./Header.css";
 
-function Header() {
+type HeaderProps = {
+  jumpToID: string;
+};
+
+function Header(props: HeaderProps) {
   return (
     <header className="App-header">
-      <p>
-        Hello, I'm <strong className="highlight">Rain Zhao</strong>
+      <h2>
+        Hello I'm <strong className="highlight">Rain Zhao</strong>,
         <br />
-        and welcome to my playground.
-      </p>
+        and welcome to my page.
+      </h2>
       <div className="Header-inline">
-        <img src={pfp} className="Header-pfp" alt="logo" />
+        <div>
+          <img src={pfp} className="Header-pfp" alt="logo" />
+          <a href={resume} target="_blank">
+            Resume
+          </a>
+        </div>
         <div className="Header-socials">
           <a href="mailto:rainzhao2000@gmail.com" target="_blank">
             <img src={gmailLogo} className="App-logo" alt="Gmail" />
@@ -31,6 +42,14 @@ function Header() {
           </a>
         </div>
       </div>
+      <p>
+        I am a third year Computer Science and Statistics student with
+        experience in software development. My hobbies include photography,
+        badminton, and video games. Come check out what I've been up to.
+      </p>
+      <a className="Header-jump" href={`#${props.jumpToID}`}>
+        ▽
+      </a>
     </header>
   );
 }
