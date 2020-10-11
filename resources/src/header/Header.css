@@ -25,7 +25,7 @@
   flex-direction: column;
 }
 
-.Header-jump {
-  text-decoration: none;
-  font-size: 10vh;
+.Header-jump-arrow {
+  height: 10vmin;
+  transform: rotate(180deg);
 }

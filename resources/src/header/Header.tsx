@@ -9,6 +9,8 @@ import githubLogo from "./githubLogo.png";
 import linkedInLogo from "./linkedInLogo.png";
 // @ts-ignore
 import resume from "./Resume.pdf";
+// @ts-ignore
+import triangle from "./triangle.png";
 import "./Header.css";
 
 type HeaderProps = {
@@ -19,7 +21,7 @@ function Header(props: HeaderProps) {
   return (
     <header className="App-header">
       <h2>
-        Hello I'm <strong className="highlight">Rain Zhao</strong>,
+        Hello I'm <strong className="highlight">Yuyang (Rain) Zhao</strong>,
         <br />
         and welcome to my page.
       </h2>
@@ -47,8 +49,8 @@ function Header(props: HeaderProps) {
         experience in software development. My hobbies include photography,
         badminton, and video games. Come check out what I've been up to.
       </p>
-      <a className="Header-jump" href={`#${props.jumpToID}`}>
-        ▽
+      <a href={`#${props.jumpToID}`}>
+        <img src={triangle} className="Header-jump-arrow" alt="jump" />
       </a>
     </header>
   );
