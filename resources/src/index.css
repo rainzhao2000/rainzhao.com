@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #1e1c41;
-  color: #fff59b;
+  color: #ffae00;
 }
 
 code {
@@ -15,7 +15,7 @@ code {
 }
 
 .highlight {
-  color: #ffae00;
+  color: #fff59b;
 }
 
 a {

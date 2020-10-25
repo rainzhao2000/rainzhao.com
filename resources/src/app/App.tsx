@@ -3,9 +3,13 @@ import Navbar from "../navbar/Navbar";
 import Header from "../header/Header";
 import Section from "../section/Section";
 // @ts-ignore
-import gifPrintSlices from "./print_slices.gif";
+import gifIdentityRGBSlices from "./identity_rgb_slices.gif";
 // @ts-ignore
-import gifNegSlices from "./neg_slices.gif";
+import gifIdentityHSLSlices from "./identity_hsl_slices.gif";
+// @ts-ignore
+import gifPrintRGBSlices from "./print_rgb_slices.gif";
+// @ts-ignore
+import gifPrintHSLSlices from "./print_hsl_slices.gif";
 // @ts-ignore
 import pngCube from "./cube.png";
 // @ts-ignore
@@ -55,22 +59,26 @@ function App() {
             className="App-flex-width-medium"
             alt="A 3D LUT cube"
           />
+          <p className="highlight">
+            3D cube LUT viewed inside Davinci Resolve Fusion
+          </p>
           <p>
             I've always been interested in the power of computation and how I
             can manipulate data.
             <br />
-            The most satisfying results for me are often visual.
+            The most satisfying results for me are often{" "}
+            <span className="highlight">visual</span>.
           </p>
           <div className="App-inline-tight">
             <img
-              src={gifNegSlices}
+              src={gifIdentityRGBSlices}
               className="App-flex-width-medium"
-              alt="Negative Film LUT Cross Sections"
+              alt="Identity LUT RGB Cross Sections"
             />
             <img
-              src={gifPrintSlices}
+              src={gifPrintRGBSlices}
               className="App-flex-width-medium"
-              alt="Print Film LUT Cross Sections"
+              alt="Print Film LUT RGB Cross Sections"
             />
           </div>
           <p>
@@ -79,6 +87,9 @@ function App() {
             <br />
             In particular, I was interested in examining Look Up Tables (LUTs)
             that represent RGB colour transformations.
+            <br />
+            The left visualization is of the identity mapping represented as a
+            33x33x33 cube LUT, while the right is of a film emulation LUT.
           </p>
           <div className="App-inline">
             <img
@@ -109,13 +120,36 @@ function App() {
           <p>
             I happened to be taking an introductory course to data analysis in
             R, and out of convenience, figured I could use it to generate my own
-            visualizations. Thus the two GIFs above were born, animating through
-            cross-section slices along a cube's diagonal (brightness).
+            visualizations. Thus the two GIFs above were born by tilting the the
+            cube diagonal (brightness) vertically and slicing up through the
+            brightness axis.
           </p>
+          <img
+            src={pngGraph}
+            className="App-flex-width-medium"
+            alt="Grapher view of how I'm slicing the cube"
+          />
+          <p>
+            Here are also the visualizations for the same LUTs in the HSL colour
+            model. Notice the L in HSL stands for Lightness, which is a similar
+            but different concept from Brightness.
+          </p>
+          <div className="App-inline-tight">
+            <img
+              src={gifIdentityHSLSlices}
+              className="App-flex-width-medium"
+              alt="Identity LUT HSL Cross Sections"
+            />
+            <img
+              src={gifPrintHSLSlices}
+              className="App-flex-width-medium"
+              alt="Print Film LUT HSL Cross Sections"
+            />
+          </div>
           <div className="App-inline">
             <p>
               It was a great exercise in R and review of some linear algebra;
-              the details of which can be viewed{" "}
+              the documentation of which can be viewed{" "}
               <a href="lut_analysis.html" target="_blank">
                 here
               </a>
@@ -125,11 +159,6 @@ function App() {
               visualizations, and also looking into Python and JavaScript
               graphics libraries.
             </p>
-            <img
-              src={pngGraph}
-              className="App-flex-width-medium"
-              alt="Grapher view of how I'm slicing the cube"
-            />
           </div>
         </Section>
       </div>
