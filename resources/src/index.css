@@ -1,3 +1,10 @@
+:root {
+  --main-bg-color: #1e1c41;
+  --main-color: #ffae00;
+  --highlight-color: #ffe261;
+  --link-color: #4ea0ff;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,8 +12,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1e1c41;
-  color: #ffae00;
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
 }
 
 code {
@@ -15,9 +22,9 @@ code {
 }
 
 .highlight {
-  color: #fff59b;
+  color: var(--highlight-color);
 }
 
 a {
-  color: #4ea0ff;
+  color: var(--link-color);
 }

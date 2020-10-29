@@ -3,15 +3,15 @@ import Navbar from "../navbar/Navbar";
 import Header from "../header/Header";
 import Section from "../section/Section";
 // @ts-ignore
-import gifIdentityRGBSlices from "./identity_rgb_slices.gif";
+import gifIdentityRGBSlices from "./identity_rgb_slices-min.gif";
 // @ts-ignore
-import gifIdentityHSLSlices from "./identity_hsl_slices.gif";
+import gifIdentityHSLSlices from "./identity_hsl_slices-min.gif";
 // @ts-ignore
-import gifPrintRGBSlices from "./print_rgb_slices.gif";
+import gifPrintRGBSlices from "./print_rgb_slices-min.gif";
 // @ts-ignore
-import gifPrintHSLSlices from "./print_hsl_slices.gif";
+import gifPrintHSLSlices from "./print_hsl_slices-min.gif";
 // @ts-ignore
-import pngCube from "./cube.png";
+import pngCube from "./cube-min.jpg";
 // @ts-ignore
 import imgLut from "./lut.png";
 // @ts-ignore

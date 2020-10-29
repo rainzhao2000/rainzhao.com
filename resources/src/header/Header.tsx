@@ -1,6 +1,6 @@
 import React from "react";
 // @ts-ignore
-import pfp from "./profile.jpg";
+import pfp from "./profile-min.jpg";
 // @ts-ignore
 import gmailLogo from "./gmailLogo.png";
 // @ts-ignore
@@ -9,8 +9,6 @@ import githubLogo from "./githubLogo.png";
 import linkedInLogo from "./linkedInLogo.png";
 // @ts-ignore
 import resume from "./Resume.pdf";
-// @ts-ignore
-import triangle from "./triangle.png";
 import "./Header.css";
 
 type HeaderProps = {
@@ -50,7 +48,7 @@ function Header(props: HeaderProps) {
         badminton, and video games. Come check out what I've been up to.
       </p>
       <a href={`#${props.jumpToID}`}>
-        <img src={triangle} className="Header-jump-arrow" alt="jump" />
+        <div className="triangle-down" />
       </a>
     </header>
   );
