@@ -53,7 +53,7 @@ function App() {
             .
           </p>
         </Section>
-        <Section id="Section-colour-data" title="Data and Colour Visualization">
+        <Section id="Section-colour-data" title="Data Visualization">
           <img
             src={pngCube}
             className="App-flex-width-medium"
@@ -160,6 +160,26 @@ function App() {
               graphics libraries.
             </p>
           </div>
+        </Section>
+        <Section id="Section-computer-vision" title="Computer Vision">
+          <p>
+            Computer vision and computer graphics are some future interests of
+            mine.
+            <br />
+            For now here's a side project to consider:
+          </p>
+          <ul>
+            Real Time Image Processing App
+            <li>
+              Android app using OpenCV to process images and OpenGL to
+              incoporate data visualizations
+            </li>
+            <li>
+              Field monitor for both external/internal cameras: apply LUTs in
+              real time, view false colour, histograms etc.
+            </li>
+            <li>Colour grading: post corrections/adjustments, edit LUTs</li>
+          </ul>
         </Section>
       </div>
     </div>
