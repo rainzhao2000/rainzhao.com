@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../navbar/Navbar";
 import Header from "../header/Header";
 import Section from "../section/Section";
+import ImgCaption from "../imgcaption/ImgCaption";
 // @ts-ignore
 import gifIdentityRGBSlices from "./identity_rgb_slices-min.gif";
 // @ts-ignore
@@ -11,11 +12,17 @@ import gifPrintRGBSlices from "./print_rgb_slices-min.gif";
 // @ts-ignore
 import gifPrintHSLSlices from "./print_hsl_slices-min.gif";
 // @ts-ignore
-import pngCube from "./cube-min.jpg";
+import imgCube from "./cube-min.jpg";
 // @ts-ignore
 import imgLut from "./lut.png";
 // @ts-ignore
-import pngGraph from "./grapher.png";
+import imgGraph from "./grapher.png";
+// @ts-ignore
+import sampleStill from "./sample_still-min.jpg";
+// @ts-ignore
+import imgSLog3 from "./slog3.png";
+// @ts-ignore
+import imgSGamut3cine from "./sgamut3cine.png";
 import "./App.css";
 
 function App() {
@@ -41,27 +48,19 @@ function App() {
             <a href="https://loopio.com/" target="_blank">
               Loopio
             </a>
-            , I've gained a great deal of best practices and experience. I will
-            continue to explore new web technologies either on this website or
-            side projects you find here. Follow my progress at this{" "}
-            <a
-              href="https://github.com/rainzhao2000/rainzhao.com"
-              target="_blank"
-            >
-              Github repo
-            </a>
-            .
+            , I've gained a great deal of experience and I will continue to
+            experiment with web technologies on this website and in side
+            projects you find here.
           </p>
         </Section>
-        <Section id="Section-colour-data" title="Data Visualization">
-          <img
-            src={pngCube}
-            className="App-flex-width-medium"
+        <Section id="Section-color-data" title="Data Visualization">
+          <ImgCaption
+            src={imgCube}
             alt="A 3D LUT cube"
+            caption="3D cube LUT viewed inside Davinci Resolve Fusion"
+            loading="lazy"
+            imgClass="App-flex-width-medium"
           />
-          <p className="highlight">
-            3D cube LUT viewed inside Davinci Resolve Fusion
-          </p>
           <p>
             I've always been interested in the power of computation and how I
             can manipulate data.
@@ -74,11 +73,13 @@ function App() {
               src={gifIdentityRGBSlices}
               className="App-flex-width-medium"
               alt="Identity LUT RGB Cross Sections"
+              loading="lazy"
             />
             <img
               src={gifPrintRGBSlices}
               className="App-flex-width-medium"
               alt="Print Film LUT RGB Cross Sections"
+              loading="lazy"
             />
           </div>
           <p>
@@ -86,7 +87,7 @@ function App() {
             plots the slices of some 3-dimensional data set.
             <br />
             In particular, I was interested in examining Look Up Tables (LUTs)
-            that represent RGB colour transformations.
+            that represent RGB color transformations.
             <br />
             The left visualization is of the identity mapping represented as a
             33x33x33 cube LUT, while the right is of a film emulation LUT.
@@ -99,14 +100,14 @@ function App() {
             />
             <p>
               A LUT in this context is a table of RGB points confined to some
-              cube. A colour grading tool suite like Photoshop or{" "}
+              cube. A color grading tool suite like Photoshop or{" "}
               <a
                 href="https://www.blackmagicdesign.com/ca/products/davinciresolve/"
                 target="_blank"
               >
                 Davinci Resolve
               </a>{" "}
-              can apply a LUT via interpolation to transform all the colours of
+              can apply a LUT via interpolation to transform all the colors of
               an image.
             </p>
           </div>
@@ -125,12 +126,13 @@ function App() {
             brightness axis.
           </p>
           <img
-            src={pngGraph}
+            src={imgGraph}
             className="App-flex-width-medium"
             alt="Grapher view of how I'm slicing the cube"
+            loading="lazy"
           />
           <p>
-            Here are also the visualizations for the same LUTs in the HSL colour
+            Here are also the visualizations for the same LUTs in the HSL color
             model. Notice the L in HSL stands for Lightness, which is a similar
             but different concept from Brightness.
           </p>
@@ -139,11 +141,13 @@ function App() {
               src={gifIdentityHSLSlices}
               className="App-flex-width-medium"
               alt="Identity LUT HSL Cross Sections"
+              loading="lazy"
             />
             <img
               src={gifPrintHSLSlices}
               className="App-flex-width-medium"
               alt="Print Film LUT HSL Cross Sections"
+              loading="lazy"
             />
           </div>
           <div className="App-inline">
@@ -166,7 +170,7 @@ function App() {
             Computer vision and computer graphics are some future interests of
             mine.
             <br />
-            For now here's a side project to consider:
+            For now here's a side project idea to consider:
           </p>
           <ul>
             Real Time Image Processing App
@@ -176,10 +180,93 @@ function App() {
             </li>
             <li>
               Field monitor for both external/internal cameras: apply LUTs in
-              real time, view false colour, histograms etc.
+              real time, view false color, histograms etc.
             </li>
-            <li>Colour grading: post corrections/adjustments, edit LUTs</li>
+            <li>Color grading: post corrections/adjustments, edit LUTs</li>
           </ul>
+        </Section>
+        <Section id="Section-algorithms" title="Algorithms">
+          <Section
+            id="Section-sub-p5"
+            title="LeetCode Problem 5"
+            isSub={true}
+          ></Section>
+        </Section>
+        <Section id="Section-color" title="Color Grading">
+          <Section id="Section-sub-film" title="Film Emulation" isSub={true}>
+            <ImgCaption
+              src={sampleStill}
+              alt="Sample Still"
+              loading="lazy"
+              caption="Crop of digital still image I shot and processed to emulate film grain, color, and halation."
+            />
+            <p>
+              In the world of photography, film is a highly sought after
+              creative medium for its{" "}
+              <span className="highlight">grain, colors, and halation</span>.
+              Emulating film on digital media is made easy by software like{" "}
+              <a href="https://www.filmconvert.com/" target="_blank">
+                filmconvert nitrate from FilmConvert
+              </a>
+              . They offer a proprietary grain algorithm, and have scanned color
+              targets on film and various digital cameras to create color
+              transformation profiles.
+            </p>
+            <p>
+              As a hobby photographer, I achieve a film look by preparing
+              digital media from my{" "}
+              <span className="highlight">
+                Sony A7III camera in an SLog3 picture profile, then applying
+                halation, filmconvert nitrate, and a print film emulation LUT
+              </span>
+              . In particular, I shoot{" "}
+              <a
+                href="https://pro.sony/s3/cms-static-content/uploadfile/06/1237494271406.pdf"
+                target="_blank"
+              >
+                SLog3 gamma with SGamut3.cine gamut
+              </a>{" "}
+              <span className="highlight">with +16 in-camera saturation</span>.
+              This defines a massive color space, too large to be properly
+              displayed, but giving us the most flexibility in post processing.
+              Since the A7III can only shoot 8 bit video, this massive color
+              space is stretched thin, introducing unwanted color and other
+              artifacts discussed in{" "}
+              <a
+                href="http://xdcam-user.com/2012/04/can-i-use-8-bit-to-record-s-log/"
+                target="_blank"
+              >
+                detail by Alister Chapman
+              </a>
+              . Thus the in-camera saturation was increased to combat this issue
+              at the expense of some color accuracy in the film emulation down
+              the line.
+            </p>
+            <div className="App-inline">
+              <ImgCaption
+                src={imgSLog3}
+                alt="graph of SLog3 gamma"
+                caption="SLog3 graph of output vs input exposure levels (logarithmic)"
+                loading="lazy"
+                imgClass="App-flex-width-medium"
+              />
+              <ImgCaption
+                src={imgSGamut3cine}
+                alt="chromaticity diagram of SGamut3.cine gamut"
+                caption="CIE Chromaticity diagram of SGamut3.cine gamut"
+                loading="lazy"
+                imgClass="App-flex-width-medium"
+              />
+            </div>
+            <p>halation</p>
+            <p>filmconvert cineon</p>
+            <p>print film rec709</p>
+          </Section>
+          <Section
+            id="Section-sub-match"
+            title="Color Matching"
+            isSub={true}
+          ></Section>
         </Section>
       </div>
     </div>

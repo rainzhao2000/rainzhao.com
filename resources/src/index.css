@@ -1,6 +1,7 @@
 :root {
   --main-bg-color: #1e1c41;
   --main-color: #ffae00;
+  --heading-color: #cbff3d;
   --highlight-color: #ffe261;
   --link-color: #4ea0ff;
 }
@@ -19,6 +20,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.heading-color {
+  color: var(--heading-color);
 }
 
 .highlight {

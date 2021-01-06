@@ -1,3 +1,12 @@
-.App-section {
+.App-section,
+.App-subsection {
   margin-bottom: 10vh;
+}
+
+.App-section .App-heading {
+  color: var(--heading-color);
+}
+
+.App-subsection .App-heading {
+  color: var(--highlight-color);
 }

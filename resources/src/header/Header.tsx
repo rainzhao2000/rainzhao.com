@@ -19,7 +19,7 @@ function Header(props: HeaderProps) {
   return (
     <header className="App-header">
       <h2>
-        Hello I'm <strong className="highlight">Yuyang (Rain) Zhao</strong>,
+        Hello I'm <strong className="heading-color">Yuyang (Rain) Zhao</strong>,
         <br />
         and welcome to my page.
       </h2>
