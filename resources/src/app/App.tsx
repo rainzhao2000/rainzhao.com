@@ -28,7 +28,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      {/*<Navbar />*/}
       <div className="App-body">
         <Header jumpToID="Section-website" />
         <Section id="Section-website" title="This website">
@@ -52,6 +52,11 @@ function App() {
             experiment with web technologies on this website and in side
             projects you find here.
           </p>
+        </Section>
+        <Section id="Section-grapher" title="Grapher">
+          <a href="Grapher.html" target="_blank">
+            Jupyter Notebook Matplotlib Grapher
+          </a>
         </Section>
         <Section id="Section-color-data" title="Data Visualization">
           <ImgCaption
@@ -185,13 +190,13 @@ function App() {
             <li>Color grading: post corrections/adjustments, edit LUTs</li>
           </ul>
         </Section>
-        <Section id="Section-algorithms" title="Algorithms">
+        {/*<Section id="Section-algorithms" title="Algorithms">
           <Section
             id="Section-sub-p5"
             title="LeetCode Problem 5"
             isSub={true}
           ></Section>
-        </Section>
+        </Section>*/}
         <Section id="Section-color" title="Color Grading">
           <Section id="Section-sub-film" title="Film Emulation" isSub={true}>
             <ImgCaption
