@@ -33,8 +33,7 @@ function App() {
         <Header jumpToID="Section-website" />
         <Section id="Section-website" title="This website">
           <p>
-            There are so many tools to build a website, but I chose to build
-            this webpage with{" "}
+            Built with{" "}
             <a href="https://reactjs.org/" target="_blank">
               React
             </a>{" "}
@@ -42,15 +41,7 @@ function App() {
             <a href="https://aws.amazon.com/s3/" target="_blank">
               AWS S3
             </a>
-            . I opted to further my experience with React because it is
-            undoubtedly flexible and in high demand. Having helped build
-            homepage widgets with React components previously at{" "}
-            <a href="https://loopio.com/" target="_blank">
-              Loopio
-            </a>
-            , I've gained a great deal of experience and I will continue to
-            experiment with web technologies on this website and in side
-            projects you find here.
+            .
           </p>
         </Section>
         <Section id="Section-grapher" title="Grapher">
@@ -58,7 +49,7 @@ function App() {
             Jupyter Notebook Matplotlib Grapher
           </a>
         </Section>
-        <Section id="Section-color-data" title="Data Visualization">
+        <Section id="Section-color-data" title="Playing with LUTs">
           <ImgCaption
             src={imgCube}
             alt="A 3D LUT cube"
@@ -66,13 +57,13 @@ function App() {
             loading="lazy"
             imgClass="App-flex-width-medium"
           />
-          <p>
+          {/* <p>
             I've always been interested in the power of computation and how I
             can manipulate data.
             <br />
             The most satisfying results for me are often{" "}
             <span className="highlight">visual</span>.
-          </p>
+          </p> */}
           <div className="App-inline-tight">
             <img
               src={gifIdentityRGBSlices}
@@ -89,10 +80,11 @@ function App() {
           </div>
           <p>
             Above are two GIFs I generated using an R script that iteratively
-            plots the slices of some 3-dimensional data set.
+            plots the slices of some 3-dimensional vector field.
             <br />
-            In particular, I was interested in examining Look Up Tables (LUTs)
-            that represent RGB color transformations.
+            LUTs representing RGB color transformations were an interesting
+            subject to be plotted this way. These animations gave me a
+            qualitative understanding of the transformation.
             <br />
             The left visualization is of the identity mapping represented as a
             33x33x33 cube LUT, while the right is of a film emulation LUT.
@@ -116,7 +108,7 @@ function App() {
               an image.
             </p>
           </div>
-          <p>
+          {/* <p>
             I wanted to peek inside one of these LUTs and see whats going on.
             Davinci Resolve's Fusion compositor actually provides a nice way to
             view the 3-dimensional plot as the cube you saw above, but I lack
@@ -135,11 +127,10 @@ function App() {
             className="App-flex-width-medium"
             alt="Grapher view of how I'm slicing the cube"
             loading="lazy"
-          />
+          /> */}
           <p>
             Here are also the visualizations for the same LUTs in the HSL color
-            model. Notice the L in HSL stands for Lightness, which is a similar
-            but different concept from Brightness.
+            model.
           </p>
           <div className="App-inline-tight">
             <img
@@ -163,14 +154,10 @@ function App() {
                 here
               </a>
               .
-              <br />I just wanted to quickly throw together a proof of concept,
-              so performance wasn't my concern. I look forward to creating more
-              visualizations, and also looking into Python and JavaScript
-              graphics libraries.
             </p>
           </div>
         </Section>
-        <Section id="Section-computer-vision" title="Computer Vision">
+        {/*<Section id="Section-computer-vision" title="Computer Vision">
           <p>
             Computer vision and computer graphics are some future interests of
             mine.
@@ -190,13 +177,13 @@ function App() {
             <li>Color grading: post corrections/adjustments, edit LUTs</li>
           </ul>
         </Section>
-        {/*<Section id="Section-algorithms" title="Algorithms">
+        <Section id="Section-algorithms" title="Algorithms">
           <Section
             id="Section-sub-p5"
             title="LeetCode Problem 5"
             isSub={true}
           ></Section>
-        </Section>*/}
+        </Section>
         <Section id="Section-color" title="Color Grading">
           <Section id="Section-sub-film" title="Film Emulation" isSub={true}>
             <ImgCaption
@@ -272,7 +259,7 @@ function App() {
             title="Color Matching"
             isSub={true}
           ></Section>
-        </Section>
+        </Section>*/}
       </div>
     </div>
   );

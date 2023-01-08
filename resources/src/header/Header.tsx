@@ -26,9 +26,6 @@ function Header(props: HeaderProps) {
       <div className="Header-inline">
         <div>
           <img src={pfp} className="Header-pfp" alt="logo" />
-          <a href={resume} target="_blank">
-            Resume
-          </a>
         </div>
         <div className="Header-socials">
           <a href="mailto:rainzhao2000@gmail.com" target="_blank">
@@ -43,13 +40,18 @@ function Header(props: HeaderProps) {
         </div>
       </div>
       <p>
-        I am a third year Computer Science and Statistics student with
-        experience in software development. My hobbies include photography,
-        badminton, and video games. Come check out what I've been up to.
+        I am a 5th year Computer Science and Statistics student with experience
+        in software development. My hobbies include photography, badminton, and
+        games.
+        <br />I will eventually flesh out all my expereinces here, but for the
+        time being, check out my{" "}
+        <a href={resume} target="_blank">
+          Resume
+        </a>
       </p>
-      <a href={`#${props.jumpToID}`}>
+      {/*<a href={`#${props.jumpToID}`}>
         <div className="triangle-down" />
-      </a>
+      </a>*/}
     </header>
   );
 }
